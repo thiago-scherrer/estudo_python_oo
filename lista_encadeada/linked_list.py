@@ -20,8 +20,8 @@ node2.next = node3
 node3.next = node4
 
 
-class PrintResult:
-    def linked_list(node):
+class LinkedList:
+    def showList(node):
         result = []
         while node:
             result.append(node.value)
@@ -30,12 +30,11 @@ class PrintResult:
                 print(result)
 
             node = node.next
-
         return result
 
 
 def main():
-    PrintResult.linked_list(node1)
+    LinkedList.showList(node1)
 
 
 if __name__ == "__main__":
