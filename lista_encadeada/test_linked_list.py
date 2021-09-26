@@ -1,37 +1,40 @@
 #!/usr/bin/env python
 
 import unittest
-import linked_list as linked
+import linked_list
 
 
-node1 = linked.node1
-node2 = linked.node2
-node3 = linked.node3
-node4 = linked.node4
-show_list = linked.LinkedList.showList(node1)
-mock_list = ["node1", "node2", "node3", "node4"]
+lk = linked_list.LinkedList()
+mock1 = ["node_example1", "node_example2"]
 
 
-class TestNode(unittest.TestCase):
-    def test_node1(self):
-        self.assertEqual(node1.value, "node1")
+class TestAddNode(unittest.TestCase):
 
-    def test_node2(self):
-        self.assertEqual(node2.value, "node2")
+    def test_add_node1(self):
+        want = "node_example1"
+        got = lk.insertNode("node_example1")
+        self.assertEqual(want, got)
 
-    def test_node3(self):
-        self.assertEqual(node3.value, "node3")
-
-    def test_node4(self):
-        self.assertEqual(node4.value, "node4")
-
-    def test_main(self):
-        self.assertEqual(show_list, mock_list)
+    def test_add_node2(self):
+        want = "node_example2"
+        got = lk.insertNode("node_example2")
+        self.assertEqual(want, got)
 
 
-class TestRemoveNode(unittest.TestCase):
-    def test_remove(self):
-        self.assertEqual(1, 1)
+class TestPrint(unittest.TestCase):
+
+    def test_print_list(self):
+        want = mock1
+        got = lk.showList()
+        self.assertEqual(want, got)
+
+
+class TestRemove(unittest.TestCase):
+
+    def test_remove_node(self):
+        want = mock1
+        got = lk.removeNode("node_example3")
+        self.assertEqual(want, got)
 
 
 if __name__ == '__main__':

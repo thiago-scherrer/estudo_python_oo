@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-import os
-
-
 class Node:
     def __init__(self, value=None, next=None):
         self.value = value
@@ -11,30 +8,61 @@ class Node:
         return str(self.value)
 
 
-node1 = Node("node1")
-node2 = Node("node2")
-node3 = Node("node3")
-node4 = Node("node4")
-node1.next = node2
-node2.next = node3
-node3.next = node4
-
-
 class LinkedList:
-    def showList(node):
+    def __init__(self):
+        self.start = None
+
+    def insertNode(self, value):
+        n = Node(value)
+
+        if(self.start):
+            n2 = self.start
+            while(n2.next):
+                n2 = n2.next
+            n2.next = n
+        else:
+            self.start = n
+        return n.value
+
+    def showList(self):
+        n2 = self.start
         result = []
-        while node:
-            result.append(node.value)
+        while(n2):
+            print(n2.value)
+            result.append(n2.value)
+            n2 = n2.next
+        return result
 
-            if os.getenv("DEBUG") == "True":
-                print(result)
+    def removeNode(self, node):
+        n2 = self.start
+        result = []
 
-            node = node.next
+        while(n2):
+            if str(n2.next) == node:
+                f = n2
+                s = n2.next
+                f.next = s.next
+            if str(n2) == node:
+                f = n2
+                s = n2.next
+                f.next = s.next
+                n2.value = s
+
+            result.append(n2.value)
+            n2 = n2.next
+
         return result
 
 
 def main():
-    LinkedList.showList(node1)
+    linked = LinkedList()
+    linked.insertNode("node1")
+    linked.insertNode("node2")
+    linked.insertNode("node3")
+    linked.insertNode("node4")
+    linked.insertNode("node5")
+    linked.removeNode("node2")
+    linked.showList()
 
 
 if __name__ == "__main__":
