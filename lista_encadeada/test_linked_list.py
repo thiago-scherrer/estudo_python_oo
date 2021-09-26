@@ -37,5 +37,13 @@ class TestRemove(unittest.TestCase):
         self.assertEqual(want, got)
 
 
+class TestSearch(unittest.TestCase):
+
+    def test_search(self):
+        want = ["node_example2"]
+        got = lk.searchList("node_example2")
+        self.assertEqual(want, got)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -53,6 +53,17 @@ class LinkedList:
 
         return result
 
+    def searchList(self, node):
+        n2 = self.start
+        result = []
+        while(n2):
+            if node == str(n2):
+               print("Search =>", n2.value)
+               result.append(n2.value)
+               break
+            n2 = n2.next
+        return result
+
 
 def main():
     linked = LinkedList()
@@ -60,6 +71,7 @@ def main():
     linked.insertNode("node2")
     linked.insertNode("node3")
     linked.insertNode("node4")
+    linked.searchList("node2")
     linked.insertNode("node5")
     linked.removeNode("node2")
     linked.showList()
