@@ -58,9 +58,9 @@ class LinkedList:
         result = []
         while(n2):
             if node == str(n2):
-               print("Search =>", n2.value)
-               result.append(n2.value)
-               break
+                print("Search =>", n2.value)
+                result.append(n2.value)
+                break
             n2 = n2.next
         return result
 
