@@ -7,7 +7,7 @@ class LinkedList:
         self.start = None
 
     def inser_node(self, value):
-        n = node.Node(value)
+        new_node = node.Node(value)
 
         if(self.start):
             n2 = self.start
