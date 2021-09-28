@@ -6,7 +6,7 @@ class LinkedList:
     def __init__(self):
         self.start = None
 
-    def insertNode(self, value):
+    def inser_node(self, value):
         n = node.Node(value)
 
         if(self.start):
@@ -18,7 +18,7 @@ class LinkedList:
             self.start = n
         return n.value
 
-    def showList(self):
+    def show_list(self):
         n2 = self.start
         result = []
         while(n2):
@@ -27,7 +27,7 @@ class LinkedList:
             n2 = n2.next
         return result
 
-    def removeNode(self, node):
+    def remove_node(self, node):
         n2 = self.start
         result = []
 
@@ -47,7 +47,7 @@ class LinkedList:
 
         return result
 
-    def searchList(self, node):
+    def search_list(self, node):
         n2 = self.start
         result = []
         while(n2):
@@ -61,14 +61,14 @@ class LinkedList:
 
 def main():
     linked = LinkedList()
-    linked.insertNode("node1")
-    linked.insertNode("node2")
-    linked.insertNode("node3")
-    linked.insertNode("node4")
-    linked.searchList("node2")
-    linked.insertNode("node5")
-    linked.removeNode("node2")
-    linked.showList()
+    linked.inser_node("node1")
+    linked.inser_node("node2")
+    linked.inser_node("node3")
+    linked.inser_node("node4")
+    linked.search_list("node2")
+    linked.inser_node("node5")
+    linked.remove_node("node2")
+    linked.show_list()
 
 
 if __name__ == "__main__":
