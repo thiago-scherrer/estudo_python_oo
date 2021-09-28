@@ -10,52 +10,52 @@ class LinkedList:
         new_node = node.Node(value)
 
         if(self.start):
-            n2 = self.start
-            while(n2.next):
-                n2 = n2.next
-            n2.next = n
+            current_node = self.start
+            while(current_node.next):
+                current_node = current_node.next
+            current_node.next = new_node
         else:
-            self.start = n
-        return n.value
+            self.start = new_node
+        return new_node.value
 
     def show_list(self):
-        n2 = self.start
+        current_node = self.start
         result = []
-        while(n2):
-            print(n2.value)
-            result.append(n2.value)
-            n2 = n2.next
+        while(current_node):
+            print(current_node.value)
+            result.append(current_node.value)
+            current_node = current_node.next
         return result
 
     def remove_node(self, node):
-        n2 = self.start
+        current_node = self.start
         result = []
 
-        while(n2):
-            if str(n2.next) == node:
-                f = n2
-                s = n2.next
+        while(current_node):
+            if str(current_node.next) == node:
+                f = current_node
+                s = current_node.next
                 f.next = s.next
-            if str(n2) == node:
-                f = n2
-                s = n2.next
+            if str(current_node) == node:
+                f = current_node
+                s = current_node.next
                 f.next = s.next
-                n2.value = s
+                current_node.value = s
 
-            result.append(n2.value)
-            n2 = n2.next
+            result.append(current_node.value)
+            current_node = current_node.next
 
         return result
 
     def search_list(self, node):
-        n2 = self.start
+        current_node = self.start
         result = []
-        while(n2):
-            if node == str(n2):
-                print("Search =>", n2.value)
-                result.append(n2.value)
+        while(current_node):
+            if node == str(current_node):
+                print("Search =>", current_node.value)
+                result.append(current_node.value)
                 break
-            n2 = n2.next
+            current_node = current_node.next
         return result
 
 
