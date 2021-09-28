@@ -1,11 +1,5 @@
 #!/usr/bin/env python
-class Node:
-    def __init__(self, value=None, next=None):
-        self.value = value
-        self.next = next
-
-    def __str__(self):
-        return str(self.value)
+import node
 
 
 class LinkedList:
@@ -13,7 +7,7 @@ class LinkedList:
         self.start = None
 
     def insertNode(self, value):
-        n = Node(value)
+        n = node.Node(value)
 
         if(self.start):
             n2 = self.start

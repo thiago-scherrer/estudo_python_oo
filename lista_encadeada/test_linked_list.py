@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import unittest
 import linked_list
 
