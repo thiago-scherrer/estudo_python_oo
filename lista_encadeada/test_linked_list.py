@@ -10,38 +10,38 @@ mock1 = ["node_example1", "node_example2"]
 class TestAddNode(unittest.TestCase):
 
     def test_add_node1(self):
-        want = "node_example1"
+        expected = "node_example1"
         got = lk.inser_node("node_example1")
-        self.assertEqual(want, got)
+        self.assertEqual(expected, got)
 
     def test_add_node2(self):
-        want = "node_example2"
+        expected = "node_example2"
         got = lk.inser_node("node_example2")
-        self.assertEqual(want, got)
+        self.assertEqual(expected, got)
 
 
 class TestPrint(unittest.TestCase):
 
     def test_print_list(self):
-        want = mock1
+        expected = mock1
         got = lk.show_list()
-        self.assertEqual(want, got)
+        self.assertEqual(expected, got)
 
 
 class TestRemove(unittest.TestCase):
 
     def test_remove_node(self):
-        want = mock1
+        expected = mock1
         got = lk.remove_node("node_example3")
-        self.assertEqual(want, got)
+        self.assertEqual(expected, got)
 
 
 class TestSearch(unittest.TestCase):
 
     def test_search(self):
-        want = ["node_example2"]
+        expected = ["node_example2"]
         got = lk.search_list("node_example2")
-        self.assertEqual(want, got)
+        self.assertEqual(expected, got)
 
 
 if __name__ == '__main__':
