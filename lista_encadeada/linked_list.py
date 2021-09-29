@@ -51,7 +51,6 @@ class LinkedList:
         result = []
         while(current_node):
             if node == str(current_node):
-                print("Search =>", current_node.value)
                 result.append(current_node.value)
                 break
             current_node = current_node.next
@@ -64,7 +63,7 @@ def main():
     linked.inser_node("node2")
     linked.inser_node("node3")
     linked.inser_node("node4")
-    linked.search_list("node2")
+    print(linked.search_list("node2"))
     linked.inser_node("node5")
     linked.remove_node("node2")
     print(linked)
