@@ -11,12 +11,12 @@ class TestAddNode(unittest.TestCase):
 
     def test_add_node1(self):
         expected = "node_example1"
-        got = lk.inser_node("node_example1")
+        got = lk.insert_node("node_example1")
         self.assertEqual(expected, got)
 
     def test_add_node2(self):
         expected = "node_example2"
-        got = lk.inser_node("node_example2")
+        got = lk.insert_node("node_example2")
         self.assertEqual(expected, got)
 
 

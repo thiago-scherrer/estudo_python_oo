@@ -14,7 +14,7 @@ class LinkedList:
             current_node = current_node.next
         return str(self.result)
 
-    def inser_node(self, value):
+    def insert_node(self, value):
         new_node = node.Node(value)
 
         if(self.start):
@@ -59,12 +59,12 @@ class LinkedList:
 
 def main():
     linked = LinkedList()
-    linked.inser_node("node1")
-    linked.inser_node("node2")
-    linked.inser_node("node3")
-    linked.inser_node("node4")
+    linked.insert_node("node1")
+    linked.insert_node("node2")
+    linked.insert_node("node3")
+    linked.insert_node("node4")
     print(linked.search_list("node2"))
-    linked.inser_node("node5")
+    linked.insert_node("node5")
     linked.remove_node("node2")
     print(linked)
 
