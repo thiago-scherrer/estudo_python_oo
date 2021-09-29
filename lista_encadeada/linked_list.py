@@ -47,14 +47,20 @@ class LinkedList:
         return result
 
     def search_list(self, value):
+        try:
+            self.current_node().index(value)
+            return value
+        except ValueError:
+            print("Not found")
+
+    def current_node(self):
         current_node = self.start
         result = []
+
         while(current_node):
-            if value == str(current_node):
-                result.append(current_node.value)
-                break
+            result.append(current_node.value)
             current_node = current_node.next
-        return result
+        return str(result)
 
 
 def main():
