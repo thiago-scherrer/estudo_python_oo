@@ -32,14 +32,14 @@ class LinkedList:
 
         while(current_node):
             if str(current_node.next) == value:
-                f = current_node
-                s = current_node.next
-                f.next = s.next
+                first_node = current_node
+                last_node = current_node.next
+                first_node.next = last_node.next
             if str(current_node) == value:
-                f = current_node
-                s = current_node.next
-                f.next = s.next
-                current_node.value = s
+                first_node = current_node
+                last_node = current_node.next
+                first_node.next = last_node.next
+                current_node.value = last_node
 
             result.append(current_node.value)
             current_node = current_node.next
