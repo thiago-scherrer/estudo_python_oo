@@ -4,7 +4,7 @@ import linked_list
 
 
 lk = linked_list.LinkedList()
-mock1 = ["node_example1", "node_example2"]
+mock1 = ['node_example1', 'node_example2']
 
 
 class TestAddNode(unittest.TestCase):
@@ -23,9 +23,9 @@ class TestAddNode(unittest.TestCase):
 class TestPrint(unittest.TestCase):
 
     def test_print_list(self):
+        got = lk
         expected = mock1
-        got = lk.show_list()
-        self.assertEqual(expected, got)
+        self.assertEqual(expected.__str__(), got.__str__())
 
 
 class TestRemove(unittest.TestCase):

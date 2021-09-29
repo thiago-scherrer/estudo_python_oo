@@ -6,6 +6,14 @@ class LinkedList:
     def __init__(self):
         self.start = None
 
+    def __str__(self):
+        current_node = self.start
+        self.result = []
+        while(current_node):
+            self.result.append(current_node.value)
+            current_node = current_node.next
+        return str(self.result)
+
     def inser_node(self, value):
         new_node = node.Node(value)
 
@@ -17,15 +25,6 @@ class LinkedList:
         else:
             self.start = new_node
         return new_node.value
-
-    def show_list(self):
-        current_node = self.start
-        result = []
-        while(current_node):
-            print(current_node.value)
-            result.append(current_node.value)
-            current_node = current_node.next
-        return result
 
     def remove_node(self, node):
         current_node = self.start
@@ -68,7 +67,7 @@ def main():
     linked.search_list("node2")
     linked.inser_node("node5")
     linked.remove_node("node2")
-    linked.show_list()
+    print(linked)
 
 
 if __name__ == "__main__":
