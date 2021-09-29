@@ -26,16 +26,16 @@ class LinkedList:
             self.start = new_node
         return new_node.value
 
-    def remove_node(self, node):
+    def remove_node(self, value):
         current_node = self.start
         result = []
 
         while(current_node):
-            if str(current_node.next) == node:
+            if str(current_node.next) == value:
                 f = current_node
                 s = current_node.next
                 f.next = s.next
-            if str(current_node) == node:
+            if str(current_node) == value:
                 f = current_node
                 s = current_node.next
                 f.next = s.next
@@ -46,11 +46,11 @@ class LinkedList:
 
         return result
 
-    def search_list(self, node):
+    def search_list(self, value):
         current_node = self.start
         result = []
         while(current_node):
-            if node == str(current_node):
+            if value == str(current_node):
                 result.append(current_node.value)
                 break
             current_node = current_node.next
