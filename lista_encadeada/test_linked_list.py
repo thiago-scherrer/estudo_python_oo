@@ -44,5 +44,21 @@ class TestSearch(unittest.TestCase):
         self.assertEqual(expected, got)
 
 
+class TestNodeList(unittest.TestCase):
+
+    def test_node_list(self):
+        expected = "['node_example1', 'node_example2']"
+        got = lk.node_list()
+        self.assertEqual(expected, got)
+
+
+class TestCurrent(unittest.TestCase):
+
+    def test_current(self):
+        expected = None
+        got = lk.current("node_example4")
+        self.assertEqual(expected, got)
+
+
 if __name__ == '__main__':
     unittest.main()

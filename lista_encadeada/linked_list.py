@@ -14,16 +14,23 @@ class LinkedList:
             current_node = current_node.next
         return str(self.result)
 
+    def current(self, value):
+
+        if self.start is None:
+            new_node = node.Node(value)
+            self.start = new_node
+
     def insert_node(self, value):
         new_node = node.Node(value)
 
-        if(self.start):
+        try:
             current_node = self.start
             while(current_node.next):
                 current_node = current_node.next
             current_node.next = new_node
-        else:
-            self.start = new_node
+        except AttributeError:
+            self.current(value)
+
         return new_node.value
 
     def remove_node(self, value):
@@ -48,12 +55,12 @@ class LinkedList:
 
     def search_list(self, value):
         try:
-            self.current_node().index(value)
+            self.node_list().index(value)
             return value
         except ValueError:
             print("Not found")
 
-    def current_node(self):
+    def node_list(self):
         current_node = self.start
         result = []
 
