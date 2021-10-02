@@ -7,14 +7,9 @@ class TestAddNode(unittest.TestCase):
     def setUp(self):
         self.linked = linked_list.LinkedList()
 
-    def test_add_node1(self):
+    def test_add_node(self):
         expected = "node_example1"
         got = self.linked.insert_node("node_example1")
-        self.assertEqual(expected, got)
-
-    def test_add_node2(self):
-        expected = "node_example2"
-        got = self.linked.insert_node("node_example2")
         self.assertEqual(expected, got)
 
     def test_print_list(self):
