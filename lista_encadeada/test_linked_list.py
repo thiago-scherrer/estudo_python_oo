@@ -3,60 +3,51 @@ import unittest
 import linked_list
 
 
-lk = linked_list.LinkedList()
-mock1 = ['node_example1', 'node_example2']
-
-
 class TestAddNode(unittest.TestCase):
+    def setUp(self):
+        self.linked = linked_list.LinkedList()
 
     def test_add_node1(self):
         expected = "node_example1"
-        got = lk.insert_node("node_example1")
+        got = self.linked.insert_node("node_example1")
         self.assertEqual(expected, got)
 
     def test_add_node2(self):
         expected = "node_example2"
-        got = lk.insert_node("node_example2")
+        got = self.linked.insert_node("node_example2")
         self.assertEqual(expected, got)
-
-
-class TestPrint(unittest.TestCase):
 
     def test_print_list(self):
-        got = lk
-        expected = mock1
+        self.linked.insert_node("node_example1")
+        self.linked.insert_node("node_example2")
+        got = self.linked
+        expected = ['node_example1', 'node_example2']
         self.assertEqual(expected.__str__(), got.__str__())
 
-
-class TestRemove(unittest.TestCase):
-
     def test_remove_node(self):
-        expected = mock1
-        got = lk.remove_node("node_example3")
+        self.linked.insert_node("node_example1")
+        self.linked.insert_node("node_example2")
+        expected = ['node_example1', 'node_example2']
+        got = self.linked.remove_node("node_example3")
         self.assertEqual(expected, got)
-
-
-class TestSearch(unittest.TestCase):
 
     def test_search(self):
+        self.linked.insert_node("node_example1")
+        self.linked.insert_node("node_example2")
         expected = "node_example2"
-        got = lk.search("node_example2")
+        got = self.linked.search("node_example2")
         self.assertEqual(expected, got)
-
-
-class TestNodeList(unittest.TestCase):
 
     def test_node_list(self):
+        self.linked.insert_node("node_example1")
+        self.linked.insert_node("node_example2")
         expected = "['node_example1', 'node_example2']"
-        got = lk.node_list()
+        got = self.linked.node_list()
         self.assertEqual(expected, got)
-
-
-class TestCurrent(unittest.TestCase):
 
     def test_current(self):
         expected = None
-        got = lk.current("node_example4")
+        got = self.linked.current("node_example4")
         self.assertEqual(expected, got)
 
 
