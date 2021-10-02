@@ -8,11 +8,11 @@ class LinkedList:
 
     def __str__(self):
         current_node = self.start
-        self.result = []
+        result = []
         while(current_node):
-            self.result.append(current_node.value)
+            result.append(current_node.value)
             current_node = current_node.next
-        return str(self.result)
+        return str(result)
 
     def current(self, value):
 
