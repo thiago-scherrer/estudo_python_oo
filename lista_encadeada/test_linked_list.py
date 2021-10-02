@@ -8,9 +8,10 @@ class TestAddNode(unittest.TestCase):
         self.linked = linked_list.LinkedList()
 
     def test_add_node(self):
-        expected = "node_example1"
-        got = self.linked.insert_node("node_example1")
-        self.assertEqual(expected, got)
+        expected = "['node_example1', 'node_example2']"
+        self.linked.insert_node("node_example1")
+        got = self.linked.insert_node("node_example2")
+        self.assertEqual(expected, str(got))
 
     def test_print_list(self):
         self.linked.insert_node("node_example1")

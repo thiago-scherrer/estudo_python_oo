@@ -31,7 +31,7 @@ class LinkedList:
         except AttributeError:
             self.current(value)
 
-        return new_node.value
+        return self
 
     def remove_node(self, value):
         current_node = self.head
