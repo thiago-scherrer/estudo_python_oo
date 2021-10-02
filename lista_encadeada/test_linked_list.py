@@ -31,6 +31,13 @@ class TestAddNode(unittest.TestCase):
         got = self.linked.remove_node("node_example3")
         self.assertEqual(expected, got)
 
+    def test_remove_inexistent_node(self):
+        self.linked.insert_node("node_example1")
+        self.linked.insert_node("node_example2")
+        expected = ['node_example1', 'node_example2']
+        got = self.linked.remove_node("node_example42")
+        self.assertEqual(expected, got)
+
     def test_search(self):
         self.linked.insert_node("node_example1")
         self.linked.insert_node("node_example2")
