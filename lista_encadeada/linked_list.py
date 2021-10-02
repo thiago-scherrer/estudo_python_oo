@@ -42,11 +42,6 @@ class LinkedList:
                 first_node = current_node
                 last_node = current_node.next
                 first_node.next = last_node.next
-            if str(current_node) == value:
-                first_node = current_node
-                last_node = current_node.next
-                first_node.next = last_node.next
-                current_node.value = last_node
 
             result.append(current_node.value)
             current_node = current_node.next
