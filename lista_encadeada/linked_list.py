@@ -4,10 +4,10 @@ import node
 
 class LinkedList:
     def __init__(self):
-        self.start = None
+        self.head = None
 
     def __str__(self):
-        current_node = self.start
+        current_node = self.head
         result = []
         while(current_node):
             result.append(current_node.value)
@@ -16,15 +16,15 @@ class LinkedList:
 
     def current(self, value):
 
-        if self.start is None:
+        if self.head is None:
             new_node = node.Node(value)
-            self.start = new_node
+            self.head = new_node
 
     def insert_node(self, value):
         new_node = node.Node(value)
 
         try:
-            current_node = self.start
+            current_node = self.head
             while(current_node.next):
                 current_node = current_node.next
             current_node.next = new_node
@@ -34,7 +34,7 @@ class LinkedList:
         return new_node.value
 
     def remove_node(self, value):
-        current_node = self.start
+        current_node = self.head
         result = []
 
         while(current_node):
@@ -56,7 +56,7 @@ class LinkedList:
             print("Not found")
 
     def node_list(self):
-        current_node = self.start
+        current_node = self.head
         result = []
 
         while(current_node):
