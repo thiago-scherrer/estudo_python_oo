@@ -40,7 +40,7 @@ class TestSearch(unittest.TestCase):
 
     def test_search(self):
         expected = "node_example2"
-        got = lk.search_list("node_example2")
+        got = lk.search("node_example2")
         self.assertEqual(expected, got)
 
 

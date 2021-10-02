@@ -53,7 +53,7 @@ class LinkedList:
 
         return result
 
-    def search_list(self, value):
+    def search(self, value):
         try:
             self.node_list().index(value)
             return value
@@ -76,7 +76,7 @@ def main():
     linked.insert_node("node2")
     linked.insert_node("node3")
     linked.insert_node("node4")
-    print(linked.search_list("node2"))
+    print(linked.search("node2"))
     linked.insert_node("node5")
     linked.remove_node("node2")
     print(linked)
