@@ -15,5 +15,5 @@ docker run -it lista_encadeada:latest
 ## test
 
 ```
-docker run -it lista_encadeada:latest python main.py
+docker run -it lista_encadeada:latest python test_linked_list.py
 ```
