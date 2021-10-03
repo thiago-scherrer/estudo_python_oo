@@ -75,7 +75,3 @@ def main():
     linked.insert_node("node5")
     linked.remove_node("node2")
     print(linked)
-
-
-if __name__ == "__main__":
-    main()
