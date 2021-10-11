@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "linked_list.py"]
+CMD [ "python", "main.py"]

@@ -63,19 +63,3 @@ class LinkedList:
             result.append(current_node.value)
             current_node = current_node.next
         return str(result)
-
-
-def main():
-    linked = LinkedList()
-    linked.insert_node("node1")
-    linked.insert_node("node2")
-    linked.insert_node("node3")
-    linked.insert_node("node4")
-    print(linked.search("node2"))
-    linked.insert_node("node5")
-    linked.remove_node("node2")
-    print(linked)
-
-
-if __name__ == "__main__":
-    main()
