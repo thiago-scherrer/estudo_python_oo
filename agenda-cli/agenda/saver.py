@@ -36,7 +36,3 @@ class Agenda:
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
             writer.writerow(filds)
-
-
-if __name__ == "__main__":
-    Agenda().header_check()
