@@ -4,7 +4,7 @@ filelock==3.0.12
 flake8==3.9.2
 iniconfig==1.1.1
 mccabe==0.6.1
-pipenv==2021.5.29
+pipenv==2022.1.8
 platformdirs==2.3.0
 pluggy==1.0.0
 py==1.10.0
